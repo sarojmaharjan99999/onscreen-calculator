@@ -49,7 +49,7 @@ function isInsertable(btnVal, inputVal) {
     if (inputVal.length == 0) {
         insertable = true;
     }
-    else if (Number(btnVal) !== NaN) {
+    else if (operators.indexOf(btnVal) == -1) {
         insertable = true;
     }
     else if(operators.indexOf(inputVal[inputVal.length - 1]) == -1) {
