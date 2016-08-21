@@ -7,6 +7,7 @@
 var keys = document.querySelectorAll("#calculator span");
 var operators = ['+', '-', 'x', '÷'];
 var p = document.querySelector("#result");
+var clearButtonValue = "C";
 
 // Add onclick event to all the keys and perform operations
 for (var i = 0; i < keys.length; i++) {
@@ -16,10 +17,10 @@ for (var i = 0; i < keys.length; i++) {
         var inputVal = input.innerHTML;
         var btnVal = this.innerHTML;
 
-        if (btnVal == 'C') {
+        if (btnVal === clearButtonValue) {
             input.innerHTML = '';
         }
-        else if (btnVal == '=') {
+        else if (btnVal === '=') {
             var equation = inputVal;
 
             if (equation) {
