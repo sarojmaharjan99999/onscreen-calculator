@@ -5,7 +5,7 @@
 "use strict";
 
 var keys = document.querySelectorAll("#calculator span");
-var operators = ['+', '-', 'x', '÷'];
+var operators = ['+', '-', 'x', '/' , '.' , '%'];
 var p = document.querySelector("#result");
 var clearButtonValue = "C";
 
@@ -22,6 +22,7 @@ for (var i = 0; i < keys.length; i++) {
         }
         else if (btnVal === '=') {
             var equation = inputVal;
+            equation = equation.replace(/x/g, '*');
 
             if (equation) {
                 input.innerHTML = eval(equation);
